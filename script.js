@@ -2,9 +2,10 @@ const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
-ambiente.loop = true;
+// ambiente.loop = true;
 // ambiente.play();
 const mainLinks = document.getElementsByName('link'); 
+
 const containers = document.getElementsByClassName('container');
 
 
@@ -18,47 +19,62 @@ for(let i = 0; i < mainLinks.length; i++){
 
 
 function openContainer(container, index) {
+    //cierra cualquier posible container que haya quedado abierto ej. irizar
     for(let i = 0; i < containers.length; i++){
         if(i != index){
             containers[i].style.display = "none"; 
         };
     }
-    main_container.style.filter = 'blur(5px)' ;
+    main_container.style.filter = 'blur(5px)' ; // blurea el fondo
     container.style.display = "flex";
     const background = document.getElementById('background');
     const retratos = container.getElementsByClassName('retrato');
     const audioIcons = container.getElementsByClassName('audio-icon');
     const audios = container.getElementsByTagName('audio');
-       
-   
+    console.log(audioIcons)
+    console.log(audios)
+    if(audios.length != 0 || audioIcons.length != 0){
         const isPlaying = [];
         for(let i=0; i < audios.length; i++){
-            isPlaying.push(false);
-            audioIcons[i].onclick = function() {
-                for(let n = 0; n < audios.length; n++){
-                    audios[n].pause();
-                }
-                console.log(audios[i]) 
-                isPlaying[i] ? audios[i].pause() : audios[i].play();
-            };
-            audios[i].onplaying = function() {
-                isPlaying[i] = true;
-                audioIcons[i].src = 'GifAnimados/Sound_animation(transp).gif'
-            };
-            audios[i].onpause = function() {
-                isPlaying[i] = false;
-                audioIcons[i].src = 'Fotos/Play.png'
-            };
+            console.log("audio o íconos presentes")
+                isPlaying.push(false);
+                audioIcons[i].onclick = function() {
+                    for(let n = 0; n < audios.length; n++){
+                        audios[n].pause();
+                    }
+                    console.log(audios[i]);
+                    isPlaying[i] ? audios[i].pause() : audios[i].play();
+                };
+                audios[i].onplaying = function() {
+                    isPlaying[i] = true;
+                    audioIcons[i].src = 'GifAnimados/Sound_animation(transp).gif';
+                };
+                audios[i].onpause = function() {
+                    isPlaying[i] = false;
+                    audioIcons[i].src = 'Fotos/Play.png';
+                };
+                background.onclick = function(){
+                    container.style.display = "none";
+                    for(let n = 0; n < audios.length; n++){
+                        audios[n].pause();
+                        audios[i].currentTime = 0;
+                    }
+                    main_container.style.filter = 'blur(0px)';  
+                    button1.play(); 
+                };            
+        };
+    } else {
+        if(audioIcons.length == 0){
+            console.log(background);
             background.onclick = function(){
+                console.log("salida");
                 container.style.display = "none";
-                for(let n = 0; n < audios.length; n++){
-                    audios[n].pause();
-                    audios[i].currentTime = 0;
-                }
                 main_container.style.filter = 'blur(0px)';  
                 button1.play(); 
-            }
+            };
         };
+    };
+        
         
         
         
@@ -77,8 +93,6 @@ let snowflakeInterval;
 function createSnowflake() {
     const zIndex = Math.trunc(Math.random() * 10);
     const blur = 10 * (1/zIndex);
-    console.log("zIndex = " + zIndex);
-    console.log("blur = " + blur);
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
     snowflake.innerHTML = '❄';
