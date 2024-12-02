@@ -75,13 +75,18 @@ let snowflakeInterval;
 
 // Create snowflake  
 function createSnowflake() {
+    const zIndex = Math.trunc(Math.random() * 10);
+    const blur = 10 * (1/zIndex);
+    console.log("zIndex = " + zIndex);
+    console.log("blur = " + blur);
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
     snowflake.innerHTML = '❄';
     snowflake.style.left = `${Math.random() * window.innerWidth}px`;
     snowflake.style.opacity = Math.random();
     snowflake.style.fontSize = `${Math.random() * 1.5 + 0.5}em`;
-    snowflake.style.filter = `blur(${Math.random()}px)`;
+    snowflake.style.filter = `blur(${blur}px)`;
+    snowflake.style.zIndex = zIndex;
     document.body.appendChild(snowflake);
     snowflakes.push(snowflake);
     dropSnowflake(snowflake);
