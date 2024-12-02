@@ -1,0 +1,191 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    
+}
+.background{
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    background-color: white;
+}
+.main-container{
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    
+}
+.bandera{
+    z-index: 1;
+    transform: translate(-50%, -100%);
+    position: absolute;
+    height: 12vh;
+    width: auto;
+}
+#bandera1{top:52.5vh; left: 17vw;}
+#bandera2{top:36vh; left: 43.8vw;}
+#bandera3{top: 44.2vh; left: 60.5vw;}
+#bandera4{top:52.5vh; left: 81vw;}
+
+.irizar{
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    top: 72vh;
+    left: 20vw;
+    z-index: 2;
+    
+}
+#irizar2{
+    mix-blend-mode: soft-light;
+}
+
+.container{
+    background-color: transparent;
+    z-index: 2;
+    display: none;
+    position: absolute;
+    transform-origin: 0% 0%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;    
+    height: 50%;
+    width: 75%;
+    border-radius: 5%;
+    animation-name: container-in;
+    animation-duration: 0.2s;
+     
+}
+@keyframes container-in{
+    from{left: 100%;filter: blur(20px);}
+    to{left: 40%;filter: blur(0px);}
+
+}
+.container-contents{
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.williams{
+    flex-direction: column;
+}
+.retrato-container{
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+}
+.multi-retrato-container{
+    z-index: 4;
+    width: 100%;
+    height: 40%;
+    display: flex;
+   
+   
+    
+}
+.multi-retrato-container p{
+    color: darkblue;
+    background-color: transparent;
+    align-self: center;
+}
+.retrato{
+    z-index: 5;
+    height: 100%;
+    width: auto;
+    z-index: 2;
+    border-radius: 5%;
+}
+.audio-icon{
+    z-index: 6;
+    width: 7.5%;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    mix-blend-mode:hard-light;
+    border-radius: 10%;
+    opacity: 75%;
+}
+.info{
+    z-index: 5;
+    color: white;
+    width: 65%;
+    height: auto;
+    z-index: 3;
+}
+.williams .info{
+    height: 30%;
+    width: 100%;
+}
+.info h1, h3, p{
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    padding: 1%;
+}
+.info p{
+    z-index: 6;
+    text-align: justify;
+}
+.info > p:first-of-type{
+    font-size: 1.2em;
+    color: orange;
+    padding: 2vh;
+}
+
+.info > p:last-child{
+    text-align: right;
+    font-weight: bold;
+}
+.multi-play{
+    z-index: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.multi-play .audio-icon{
+    z-index: 7;
+    position: static;
+    height: 5%;
+}
+.multi-play p{
+    background-color: transparent;
+    display: block;
+    text-align: start;
+    color: yellow;
+
+}
+.sombra{
+    background-color: black;
+    display: block;
+    position: relative;
+    top: 3%;
+    filter: blur(20px);
+    mix-blend-mode: luminosity;
+}
+
+#subtitles {
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+    
+}
+.snowflake {
+    position: absolute;
+    color: white; /* Snowflake color */
+    pointer-events: none; /* Prevent interaction */
+    font-size: 1em;
+    z-index: 9999; /* Ensure snowflakes are on top */
+    opacity: 0.8; /* Opacity for snowflakes */
+}
