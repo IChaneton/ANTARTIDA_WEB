@@ -150,20 +150,24 @@ html, body {
 }
 .multi-play{
     z-index: 6;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-between;
+    border-radius: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    justify-content:space-around;
     align-items: center;
 }
 .multi-play .audio-icon{
     z-index: 7;
     position: static;
-    height: 5%;
+    height: 4%;
 }
 .multi-play p{
     background-color: transparent;
     display: block;
     text-align: start;
-    color: yellow;
+    color: white;
 
 }
 .sombra{
