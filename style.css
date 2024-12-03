@@ -42,9 +42,9 @@ html, body {
 
 .irizar{
     position: absolute;
-    width: 28vw;
+    width: 27vw;
     height: auto;
-    top: 70vh;
+    top: 65vh;
     left: 20vw;
     z-index: 2;  
 }
@@ -53,9 +53,9 @@ html, body {
 }
 .boya{
     position: absolute;
-    width: 5vw;
+    width: 7vw;
     height: auto;
-    top: 72vh;
+    top: 80vh;
     left: 80vw;
     z-index: 2;
 }
@@ -87,9 +87,7 @@ html, body {
     z-index: 3;
     display: flex;
     align-items: center;
-    justify-content: space-around;   
-   
-    
+    justify-content: space-around;       
 }
 .williams{
     flex-direction: column;
@@ -100,9 +98,7 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: auto;
-    
-   
+    width: auto; 
 }
 .multi-retrato-container{
     z-index: 4;
@@ -124,16 +120,12 @@ html, body {
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
    
 }
-.logo{
-    width: 15vw;
-    height: auto;
+.institucional{
+    /* border: solid red 1px; */
+    flex-direction: column;
     
-    z-index: 8;
-   
-    padding: 3vh 0vw;
-    border-radius: 10%;
-    background-color: rgb(34, 41, 68, 0.8);
 }
+
 .audio-icon{
     z-index: 6;
     width: 7.5%;
@@ -196,23 +188,36 @@ html, body {
 }
 .multi-play p{
     background-color: rgba(0, 0, 0, 0.1);
-   
     display: block;
     text-align: start;
     color: white;
+}
+.institucional .info{
+    width: 75%;
     
-   
-
 }
-.sombra{
-    background-color: black;
-    display: block;
-   position: relative;
-    top: 50%;
-    filter: blur(20px);
-    mix-blend-mode: luminosity;
+.institucional .info h1{
+    text-align: center;
 }
-
+.institucional .info p{
+    
+    text-align: center;
+}
+.logos-container{
+    /* border: purple solid 1px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+    mask-border-mode:alpha ;
+    text-align: center;
+    border-radius: 5%;
+    width: 75%;
+}
+.logo{
+    width: auto;
+    height: 8vh;
+    z-index: 8;
+    margin: 1vh 3vh;
+}
 #subtitles {
     margin-top: 20px;
     opacity: 0; /* Initially hidden */
