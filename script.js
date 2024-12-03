@@ -2,8 +2,9 @@ const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
-// ambiente.loop = true;
-// ambiente.play();
+ambiente.volume = 0.2;
+ambiente.loop = true;
+ambiente.play();
 const mainLinks = document.getElementsByName('link'); 
 
 const containers = document.getElementsByClassName('container');
@@ -36,14 +37,20 @@ function openContainer(container, index) {
     if(audios.length != 0 || audioIcons.length != 0){
         const isPlaying = [];
         for(let i=0; i < audios.length; i++){
-            console.log("audio o íconos presentes")
+            
                 isPlaying.push(false);
                 audioIcons[i].onclick = function() {
                     for(let n = 0; n < audios.length; n++){
                         audios[n].pause();
                     }
                     console.log(audios[i]);
-                    isPlaying[i] ? audios[i].pause() : audios[i].play();
+                    if(isPlaying[i]){
+                        audios[i].pause();
+                        ambiente.play();
+                    }else{
+                        audios[i].play();
+                        ambiente.pause();
+                    }
                 };
                 audios[i].onplaying = function() {
                     isPlaying[i] = true;
@@ -61,6 +68,7 @@ function openContainer(container, index) {
                     }
                     main_container.style.filter = 'blur(0px)';  
                     button1.play(); 
+                    ambiente.play();
                 };            
         };
     } else {
