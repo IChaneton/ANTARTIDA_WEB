@@ -1,12 +1,29 @@
+
 const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
-ambiente.play();
 ambiente.volume = 0.2;
 ambiente.loop = true;
-const mainLinks = document.getElementsByName('link'); 
+ambiente.play();
 
+// Function to handle visibility change 
+function handleVisibilityChange() { 
+    if (document.hidden) { 
+        console.log("The page is in the background."); 
+        ambiente.pause();
+    } else { 
+        console.log("The page is active."); 
+        ambiente.play()
+    } 
+} 
+// Add event listeners for visibility change 
+document.addEventListener("visibilitychange", handleVisibilityChange, false); 
+// Initial check 
+handleVisibilityChange(); 
+   
+
+const mainLinks = document.getElementsByName('link'); 
 const containers = document.getElementsByClassName('container');
 
 
