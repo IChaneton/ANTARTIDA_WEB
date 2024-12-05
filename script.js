@@ -2,9 +2,9 @@ const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
+ambiente.play();
 ambiente.volume = 0.2;
 ambiente.loop = true;
-ambiente.play();
 const mainLinks = document.getElementsByName('link'); 
 
 const containers = document.getElementsByClassName('container');
