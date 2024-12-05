@@ -14,12 +14,12 @@ function handleVisibilityChange() {
         ambiente.pause();
     } else { 
         console.log("The page is active."); 
+        ambiente.currentTime = 0;
         ambiente.play()
-    } 
-} 
+    };
+}; 
 // Add event listeners for visibility change 
 document.addEventListener("visibilitychange", handleVisibilityChange, false); 
-// Initial check 
 handleVisibilityChange(); 
    
 
