@@ -5,8 +5,8 @@
     --MRoca-DarkGrey:rgb(35, 31, 32);
     --MRoca-Blue:rgb(34, 41, 68, 0.8);
     --MRoca-Beige:rgb(214, 202, 185);
-    --Book-Antigua:"/Users/tach/Desktop/Antartida_Web/Fonts/Book Antiqua";
-    --Source-Sans-Pro:"/Users/tach/Desktop/Antartida_Web/Fonts/source-sans-pro";
+    --Book-Antigua:"./Fonts/Book Antiqua";
+    --Source-Sans-Pro:"./Fonts/source-sans-pro";
 }
 html, body {
     height: 100vh;
