@@ -12,9 +12,10 @@ html, body {
     /* border: solid red 3px; */
     margin: 0%;
     font-size: 2.25vh;
+    overflow:scroll;
 }
 .background{
-    position: sticky;
+    position: fixed;
     overflow: hidden;
     width:auto ;
     height:100vh;
