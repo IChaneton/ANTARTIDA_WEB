@@ -9,49 +9,38 @@
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
 }
 html, body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
+    /* border: solid red 3px; */
+    margin: 0%;
     font-size: 2.25vh;
-    overflow: hidden;
-    
 }
 .background{
+    position: sticky;
     overflow: hidden;
-    width:100vw;
+    width:auto ;
     height:100vh;
-    position:absolute;
-    top: 0%;
-    left: 0%;
     z-index: 0;
-    background-color: white;
 }
-.main-container{
-    position: absolute;
-    width: 100%;
-    height: 100%; 
-    
-}
+
 .bandera{
     z-index: 1;
     transform: translate(-50%, -100%);
     position: absolute;
-    height: 12vh;
+    height: 14vw;
     width: auto;
-   
+    /* border: solid red 1px; */
+    
 }
-
-#bandera1{top:52.5vh; left: 17vw;}
-#bandera2{top:36vh; left: 43.8vw;}
-#bandera3{top: 44.2vh; left: 60.5vw;}
-#bandera4{top:52.5vh; left: 81vw;}
+#bandera1{bottom:32.5vh; left: 17.5vw;}
+#bandera2{bottom:39vh; left: 38vw;}
+#bandera3{bottom:40vh; left: 60vw;}
+#bandera4{bottom:36vh; left: 85vw;}
 
 .irizar{
     position: absolute;
-    width: 27vw;
+    width: 50vw;
     height: auto;
-    top: 65vh;
-    left: 20vw;
+    top: 72vh;
+    left: 10vw;
     z-index: 2;  
 }
 #irizar2{
@@ -59,10 +48,10 @@ html, body {
 }
 .boya{
     position: absolute;
-    width: 7vw;
+    width: 15vw;
     height: auto;
-    top: 80vh;
-    left: 80vw;
+    top: 87vh;
+    left: 77vw;
     z-index: 2;
 }
 #boya2{
@@ -92,6 +81,7 @@ html, body {
 .container-contents{
     z-index: 3;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;       
 }
@@ -230,4 +220,57 @@ html, body {
     font-size: 1em;
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
+}
+
+@media only screen and (min-width: 769px) {
+    html, body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        font-size: 2.25vh;
+        overflow: hidden;
+        /* border: solid green 5px; */
+    }
+    .background{
+        overflow: hidden;
+        width:100vw;
+        height:100vh;
+        position:absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 0;
+        background-color: white;
+    }
+    .bandera{
+        height: 7vw;
+    }
+    #bandera1{top:52.5vh; left: 17vw;}
+    #bandera2{top:36vh; left: 43.8vw;}
+    #bandera3{top: 44.2vh; left: 60.5vw;}
+    #bandera4{top:52.5vh; left: 81vw;}
+    .irizar{
+        width: 27vw;
+        height: auto;
+        top: 65vh;
+        left: 20vw;
+    }
+    .boya{
+        width: 7vw;
+        top: 80vh;
+        left: 80vw;
+    }
+    .container{
+        display: none;
+        top: 50%;
+        left: 50%;    
+        height: 50%;
+        width: 75%;
+    }
+    .container-contents{
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;       
+    }
 }
