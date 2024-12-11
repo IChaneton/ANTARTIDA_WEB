@@ -1,9 +1,9 @@
 
-const main_container = document.getElementById('main-container');
+// const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
-ambiente.volume = 0.2;
+ambiente.volume = 0.0;
 ambiente.loop = true;
 ambiente.play();
 
@@ -37,16 +37,20 @@ for(let i = 0; i < mainLinks.length; i++){
 
 
 function openContainer(container, index) {
+    
     //cierra cualquier posible container que haya quedado abierto ej. irizar
     for(let i = 0; i < containers.length; i++){
         if(i != index){
             containers[i].style.display = "none"; 
         };
-    }
+    };
+    const x = container.getElementsByClassName('x');
+
+    const main_container = document.getElementById("main-container");    
     main_container.style.filter = 'blur(5px)' ; // blurea el fondo
-    container.style.display = "flex";
-    const background = document.getElementById('background');
-    const retratos = container.getElementsByClassName('retrato');
+    main_container.style.backdropFilter = 'blur(5px)';
+
+    container.style.display = "contents";
     const audioIcons = container.getElementsByClassName('audio-icon');
     const audios = container.getElementsByTagName('audio');
     console.log(audioIcons)
@@ -54,13 +58,11 @@ function openContainer(container, index) {
     if(audios.length != 0 || audioIcons.length != 0){
         const isPlaying = [];
         for(let i=0; i < audios.length; i++){
-            
                 isPlaying.push(false);
                 audioIcons[i].onclick = function() {
                     for(let n = 0; n < audios.length; n++){
                         audios[n].pause();
                     }
-                    console.log(audios[i]);
                     if(isPlaying[i]){
                         audios[i].pause();
                         ambiente.play();
@@ -77,34 +79,29 @@ function openContainer(container, index) {
                     isPlaying[i] = false;
                     audioIcons[i].src = 'Fotos/Play.png';
                 };
-                background.onclick = function(){
+                x[0].onclick = function(){
                     container.style.display = "none";
                     for(let n = 0; n < audios.length; n++){
                         audios[n].pause();
                         audios[i].currentTime = 0;
                     }
-                    main_container.style.filter = 'blur(0px)';  
+                    main_container.style.filter = 'blur(0px)'; 
+                    main_container.style.backdropFilter = 'blur(0px)'; 
                     button1.play(); 
                     ambiente.play();
                 };            
         };
     } else {
         if(audioIcons.length == 0){
-            console.log(background);
-            background.onclick = function(){
-                console.log("salida");
+            console.log(x);
+            x[0].onclick = function(){
                 container.style.display = "none";
                 main_container.style.filter = 'blur(0px)';  
+                main_container.style.backdropFilter = 'blur(0px)'; 
                 button1.play(); 
             };
         };
     };
-        
-        
-        
-        
-        
-    
 }
 
 //SCREEN SAVER

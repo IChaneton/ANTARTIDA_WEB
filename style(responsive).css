@@ -9,39 +9,52 @@
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
 }
 html, body {
-    /* border: solid red 3px; */
-    margin: 0%;
+    background-color: white;    
     font-size: 2.25vh;
+    margin: 0%;
+    /* background-image: url("./Fotos/Fondo_Isla.jpg"); */
+    /* min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:0%;
+    background-size: cover;  
+    z-index: 0; */
 }
 .background{
     position: fixed;
     overflow: hidden;
-    width:auto ;
-    height:100vh;
+    width: auto;
+    height: 100vh;
     z-index: 0;
 }
-
+.main-container{
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vw; 
+    margin: 0%;
+    box-sizing:border-box;
+    
+}
 .bandera{
     z-index: 1;
     transform: translate(-50%, -100%);
     position: absolute;
     height: 14vw;
     width: auto;
-    /* border: solid red 1px; */
-    
+    /* border: solid red 1px; */ 
 }
 #bandera1{bottom:32.5vh; left: 17.5vw;}
 #bandera2{bottom:39vh; left: 38vw;}
 #bandera3{bottom:40vh; left: 60vw;}
 #bandera4{bottom:36vh; left: 85vw;}
-
 .irizar{
     position: absolute;
     width: 50vw;
     height: auto;
     top: 72vh;
     left: 10vw;
-    z-index: 2;  
+    z-index: 1;  
 }
 #irizar2{
     mix-blend-mode: soft-light;
@@ -52,38 +65,53 @@ html, body {
     height: auto;
     top: 87vh;
     left: 77vw;
-    z-index: 2;
+    z-index: 0;
 }
 #boya2{
     mix-blend-mode: soft-light;
 }
-
+.main-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;    
+    
+}
 .container{
     background-color: transparent;
     z-index: 2;
     display: none;
     position: absolute;
-    transform-origin: 0% 0%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;    
-    height: 50%;
-    width: 75%;
-    border-radius: 5%;
     animation-name: container-in;
     animation-duration: 0.2s;
-    
+   
 }
 @keyframes container-in{
     from{left: 100%;filter: blur(20px);}
     to{left: 40%;filter: blur(0px);}
 }
 .container-contents{
-    z-index: 3;
+    margin-top: 5vh;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;       
+}
+.x{
+    background: transparent;
+    z-index: 6;
+    cursor: pointer;
+    position: absolute;
+    top: -5vh;
+    right: 7vw;
+    border-radius: 10%;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 5vh;
+    line-height: 3vh;
+}
+.x:active{
+    border: darkred solid;
+    background-color: transparent;
+    color: black;
 }
 .williams{
     flex-direction: column;
@@ -93,27 +121,22 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: auto; 
 }
 .retrato{
     z-index: 5;
-    height: 100%;
-    width: auto;
     z-index: 2;
     border-radius: 5%;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
-   
+    width: 90vw;
 }
 .institucional{
     /* border: solid red 1px; */
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
 .audio-icon{
     z-index: 6;
-    width: 6%;
+    width: 20%;
     height: auto;
     display: block;
     position: absolute;
@@ -124,7 +147,7 @@ html, body {
 }
 .info{
     z-index: 5;
-    width: 65%;
+    width: 90%;
     height: auto;
     z-index: 3;
    
@@ -222,7 +245,7 @@ html, body {
     opacity: 0.8; /* Opacity for snowflakes */
 }
 
-@media only screen and (min-width: 769px) {
+@media (orientation: landscape) {
     html, body {
         height: 100vh;
         width: 100vw;
@@ -254,23 +277,181 @@ html, body {
         top: 65vh;
         left: 20vw;
     }
+    #irizar2{
+        mix-blend-mode: soft-light;
+    }
     .boya{
         width: 7vw;
         top: 80vh;
         left: 80vw;
     }
     .container{
+        background-color: transparent;
+        z-index: 2;
         display: none;
+        position: absolute;
+        border-radius: 5%;
+        animation-name: container-in;
+        animation-duration: 0.2s;
+    }
+    .container-contents{
+        position: absolute;
+        transform-origin: 0% 0%;
+        transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;    
         height: 50%;
         width: 75%;
-    }
-    .container-contents{
-        
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;       
     }
+    .x{
+        position: fixed;
+        top: -8vh;
+        right: -5vw;
+        font-size: 5vh;
+        line-height: 3vh;
+        background: transparent;
+    }
+    .x:active{
+        border: darkred solid;
+        background-color: transparent;
+        color: black;
+    }
+    .williams{
+        flex-direction: column;
+    }
+    .retrato-container{
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: auto; 
+    }
+    .retrato{
+        z-index: 5;
+        height: 100%;
+        width: auto;
+        z-index: 2;
+        border-radius: 5%;
+        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+    }
+    .institucional{
+        /* border: solid red 1px; */
+        flex-direction: column;
+    }
+    .audio-icon{
+        z-index: 6;
+        width: 6%;
+        height: auto;
+        display: block;
+        position: absolute;
+        z-index: 3;
+        mix-blend-mode:hard-light;
+        border-radius: 10%;
+        opacity: 75%;
+    }
+    .info{
+        z-index: 5;
+        width: 65%;
+        height: auto;
+        z-index: 3;
+       
+    }
+    .williams .info{
+        height: 30%;
+        width: 100%;
+    }
+    .info h1, h2, h3, p{
+        color: var(--Color-Texto);
+        z-index: 6;
+        background-color: var(--Color-Fondo);
+        border-radius: 3%;
+        padding: 1%;
+        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+        font-family: var(--Book-Antigua);
+    }
+    
+    .info > p{
+        z-index: 6;
+        text-align: justify;
+        font-family: var(--Source-Sans-Pro);
+    }
+    .info > p:first-of-type{
+        font-size: 1.2em;
+        padding: 2vh;
+        color: var(--Color-Detalles);
+    }
+    
+    .info > p:last-child{
+        text-align: right;
+        font-weight: bold;
+    }
+    .multi-play{
+        z-index: 6;
+        background-color: var(--Color-Fondo);
+        display: flex;
+        border-radius: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        justify-content:space-around;
+        align-items: center;
+        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+    }
+    .multi-play .audio-icon{
+        z-index: 7;
+        position: static;
+        height: 4%;
+    }
+    .multi-play p{
+        background-color: rgba(0, 0, 0, 0.1); 
+        display: block;
+        text-align: start;
+        color: var(--Color-Detalles);
+    }
+    .institucional .info{
+        width: 75%;
+        
+    }
+    .institucional{
+        text-align: center;
+    }
+    .institucional .info p{
+        
+        text-align: center;
+    }
+    .logos-container{
+        /* border: purple solid 1px; */
+        background-color: var(--Color-Fondo);
+        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+        mask-border-mode:alpha ;
+        text-align: center;
+        border-radius: 5%;
+        width: 75%;
+    }
+    .logo{
+        width: auto;
+        height: 8vh;
+        z-index: 8;
+        margin: 1vh 3vh;
+        filter: grayscale();
+    }
+    #subtitles {
+        margin-top: 20px;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease;
+        
+    }
+    .snowflake {
+        position: absolute;
+        color: white; /* Snowflake color */
+        pointer-events: none; /* Prevent interaction */
+        font-size: 1em;
+        z-index: 9999; /* Ensure snowflakes are on top */
+        opacity: 0.8; /* Opacity for snowflakes */
+    }
 }
+
