@@ -22,7 +22,7 @@ html, body {
 }
 .background{
     position: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
     width: auto;
     height: 100vh;
     z-index: 0;
@@ -63,7 +63,7 @@ html, body {
     position: absolute;
     width: 15vw;
     height: auto;
-    top: 87vh;
+    top: 80vh;
     left: 77vw;
     z-index: 0;
 }
@@ -185,9 +185,9 @@ html, body {
     z-index: 6;
     background-color: var(--Color-Fondo);
     display: flex;
+    flex-direction: column;
     border-radius: 5%;
-    padding-left: 3%;
-    padding-right: 3%;
+   padding: 3vh;
     justify-content:space-around;
     align-items: center;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
@@ -394,6 +394,7 @@ html, body {
         z-index: 6;
         background-color: var(--Color-Fondo);
         display: flex;
+        flex-direction: row;
         border-radius: 5%;
         padding-left: 3%;
         padding-right: 3%;

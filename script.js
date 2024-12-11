@@ -48,13 +48,10 @@ function openContainer(container, index) {
 
     const main_container = document.getElementById("main-container");    
     main_container.style.filter = 'blur(5px)' ; // blurea el fondo
-    main_container.style.backdropFilter = 'blur(5px)';
 
     container.style.display = "contents";
     const audioIcons = container.getElementsByClassName('audio-icon');
     const audios = container.getElementsByTagName('audio');
-    console.log(audioIcons)
-    console.log(audios)
     if(audios.length != 0 || audioIcons.length != 0){
         const isPlaying = [];
         for(let i=0; i < audios.length; i++){
@@ -86,7 +83,6 @@ function openContainer(container, index) {
                         audios[i].currentTime = 0;
                     }
                     main_container.style.filter = 'blur(0px)'; 
-                    main_container.style.backdropFilter = 'blur(0px)'; 
                     button1.play(); 
                     ambiente.play();
                 };            
@@ -97,7 +93,6 @@ function openContainer(container, index) {
             x[0].onclick = function(){
                 container.style.display = "none";
                 main_container.style.filter = 'blur(0px)';  
-                main_container.style.backdropFilter = 'blur(0px)'; 
                 button1.play(); 
             };
         };
