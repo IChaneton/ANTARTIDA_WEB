@@ -1,6 +1,6 @@
-form#searchform{
+/* form#searchform{
     display: none;
-}
+} */
 :root {
     --Color-Fondo:#08060880;
     --Color-Texto: #ededed;
