@@ -1,7 +1,5 @@
-@media (max-width: 800px){
-    form#searchform{
-       display: none;
-    }
+form#searchform{
+    display: none;
 }
 :root {
     --Color-Fondo:#08060880;
