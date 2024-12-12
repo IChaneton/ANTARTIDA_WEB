@@ -1,3 +1,8 @@
+@media (max-width: 800px){
+    form#searchform{
+       display: none;
+    }
+}
 :root {
     --Color-Fondo:#08060880;
     --Color-Texto: #ededed;
@@ -86,9 +91,7 @@ html, body {
     z-index: 2;
     display: none;
     animation-name: container-in;
-    animation-duration: 0.2s;
-    border: purple solid;
-   
+    animation-duration: 0.2s;   
 }
 @keyframes container-in{
     from{left: 100%;filter: blur(20px);}
