@@ -246,6 +246,11 @@ html, body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
+@media only screen and (orientation : landscape) , only screen and (max-device-width : 900)  {
+    .background{
+        border: red solid 5px;
+    }
+}
 
 @media only screen and (orientation: landscape) {
     html, body {
@@ -257,6 +262,7 @@ html, body {
         /* border: solid green 5px; */
     }
     .background{
+        border: none;
         overflow: hidden;
         width:100%;
         height:100%;

@@ -1,5 +1,6 @@
 
-// const main_container = document.getElementById('main-container');
+
+const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
@@ -45,8 +46,6 @@ function openContainer(container, index) {
         };
     };
     const x = container.getElementsByClassName('x');
-
-    const main_container = document.getElementById("main-container");    
     main_container.style.filter = 'blur(5px)' ; // blurea el fondo
 
     container.style.display = "contents";
