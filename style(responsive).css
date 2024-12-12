@@ -127,7 +127,7 @@ html, body {
     justify-content: center;
 }
 .retrato{
-    z-index: 5;
+    
     z-index: 2;
     border-radius: 5%;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
@@ -248,13 +248,27 @@ html, body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
-@media only screen and (orientation : landscape) , only screen and (max-device-width : 900)  {
-    .background{
-        border: red solid 5px;
+@media only screen and (orientation : landscape)  and (max-width:900px)  {
+    .irizar{
+        border: solid red;
     }
+    .container-contents{
+        position: absolute;
+        transform-origin: 0% 0%;
+        transform: translate(-50%, -50%);
+       
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;       
+        border: solid green;
+    }
+
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape)  {
     html, body {
         height: 100vh;
         width: 100vw;
