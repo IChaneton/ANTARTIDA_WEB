@@ -74,6 +74,7 @@ html, body {
 #boya2{
     mix-blend-mode: soft-light;
 }
+
 .main-container{
     position: fixed;
     width: 100vw;
@@ -84,9 +85,9 @@ html, body {
     background-color: transparent;
     z-index: 2;
     display: none;
-    position: absolute;
     animation-name: container-in;
     animation-duration: 0.2s;
+    border: purple solid;
    
 }
 @keyframes container-in{
@@ -248,25 +249,6 @@ html, body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
-@media only screen and (orientation : landscape)  and (max-width:900px)  {
-    .irizar{
-        border: solid red;
-    }
-    .container-contents{
-        position: absolute;
-        transform-origin: 0% 0%;
-        transform: translate(-50%, -50%);
-       
-        height: 90%;
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;       
-        border: solid green;
-    }
-
-}
 
 @media only screen and (orientation: landscape)  {
     html, body {
@@ -313,23 +295,24 @@ html, body {
         background-color: transparent;
         z-index: 2;
         display: none;
-        position: absolute;
         border-radius: 5%;
         animation-name: container-in;
         animation-duration: 0.2s;
     }
     .container-contents{
+        margin-top: 0%;
         position: absolute;
         transform-origin: 0% 0%;
         transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;    
-        height: 50%;
-        width: 75%;
+        top: 50vh;
+        left: 50vw;    
+        height: 75%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;       
+        border: solid blue;
     }
     .x{
         position: fixed;
@@ -403,9 +386,10 @@ html, body {
         z-index: 6;
         text-align: justify;
         font-family: var(--Source-Sans-Pro);
+        font-size: larger;
     }
     .info > p:first-of-type{
-        font-size: 1.2em;
+        font-size: 1.8em;
         padding: 2vh;
         color: var(--Color-Detalles);
     }
@@ -479,5 +463,25 @@ html, body {
         opacity: 0.8; /* Opacity for snowflakes */
     }
 }
-
-
+@media (min-width: 900px){
+    .container-contents{
+       
+        height: 50%;
+        width: 75%;     
+        border: solid violet;
+    }
+    .info > p{
+        z-index: 6;
+        text-align: justify;
+        font-family: var(--Source-Sans-Pro);
+        font-size:medium;
+    }
+    .info > p:first-of-type{
+        font-size: 1.2em;
+        padding: 2vh;
+        color: var(--Color-Detalles);
+    }
+    .info > p:last-child{
+        font-size: larger;
+    }
+}

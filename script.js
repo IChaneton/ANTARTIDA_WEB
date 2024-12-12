@@ -1,5 +1,6 @@
-
-
+window.scroll({
+    top: 60,
+  });
 const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
@@ -48,7 +49,7 @@ function openContainer(container, index) {
     const x = container.getElementsByClassName('x');
     main_container.style.filter = 'blur(5px)' ; // blurea el fondo
 
-    container.style.display = "contents";
+    container.style.display = 'block';
     const audioIcons = container.getElementsByClassName('audio-icon');
     const audios = container.getElementsByTagName('audio');
     if(audios.length != 0 || audioIcons.length != 0){
