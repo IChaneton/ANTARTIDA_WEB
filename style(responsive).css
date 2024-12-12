@@ -20,14 +20,7 @@ html, body {
     background-size: cover;  
     z-index: 0; */
 }
-.background{
-    position: fixed;
-    top: 0%;
-    overflow-x: hidden;
-    width: auto;
-    height: 100%;
-    z-index: 0;
-}
+
 .main-container{
     overflow: hidden;
     position: fixed;
@@ -37,6 +30,15 @@ html, body {
     margin: 0%;
     box-sizing:border-box;
     
+}
+.background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    z-index: 0;
 }
 .bandera{
     z-index: 1;
