@@ -312,7 +312,6 @@ html, body {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;       
-        border: solid blue;
     }
     .x{
         position: fixed;
@@ -464,11 +463,9 @@ html, body {
     }
 }
 @media (min-width: 900px){
-    .container-contents{
-       
+    .container-contents{   
         height: 50%;
         width: 75%;     
-        border: solid violet;
     }
     .info > p{
         z-index: 6;
