@@ -259,13 +259,23 @@ html, body {
         overflow: hidden;
         /* border: solid green 5px; */
     }
+    .main-container{
+        overflow: hidden;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100vw;
+        height: 100vh; 
+        margin: 0%;
+        box-sizing:border-box;
+    }
     .background{
         border: none;
         overflow: hidden;
-        width:100%;
-        height:100%;
+        width:100vw;
+        height:100vh;
         position:absolute;
-        top: 0%;
+        bottom: 100vh;
         left: 0%;
         z-index: 0;
         background-color: white;
