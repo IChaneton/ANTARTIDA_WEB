@@ -256,11 +256,10 @@ html, body {
         width: 100vw;
         margin: 0;
         font-size: 2.25vh;
-        overflow: hidden;
         /* border: solid green 5px; */
     }
     .main-container{
-        overflow-x: hidden;
+        overflow: hidden;
         position: absolute;
         top: 0%;
         left: 0%;
