@@ -281,15 +281,15 @@ html, body {
         width: 27vw;
         height: auto;
         top: 65vh;
-        left: 20vw;
+        left: 18vw;
     }
     #irizar2{
         mix-blend-mode: soft-light;
     }
     .boya{
-        width: 7vw;
+        width: 6vw;
         top: 80vh;
-        left: 80vw;
+        left: 75vw;
     }
     .container{
         background-color: transparent;
