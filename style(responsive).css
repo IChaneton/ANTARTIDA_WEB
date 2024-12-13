@@ -260,7 +260,7 @@ html, body {
         /* border: solid green 5px; */
     }
     .main-container{
-        overflow: hidden;
+        overflow-x: hidden;
         position: absolute;
         top: 0%;
         left: 0%;
