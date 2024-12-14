@@ -1,9 +1,13 @@
 // New event listener:
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        // Hide the address bar:
-        window.scrollTo(0, 200);
-    }, 0);
+window.addEventListener("load", function() {
+     
+    window.scroll(0, 50);
+    console.log(window.scrollY) 
+   
+
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.documentElement.requestFullscreen().catch(console.log);
 });
 
 const main_container = document.getElementById('main-container');
