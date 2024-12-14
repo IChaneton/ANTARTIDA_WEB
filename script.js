@@ -1,9 +1,10 @@
-// document.addEventListener("load",function() {
-//     setTimeout(function(){
-//         // This hides the address bar:
-//         window.scrollTo(0, 500);
-//     }, 0);
-// });
+// New event listener:
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // Hide the address bar:
+        window.scrollTo(0, 200);
+    }, 0);
+});
 
 const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
