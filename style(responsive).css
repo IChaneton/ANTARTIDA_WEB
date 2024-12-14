@@ -15,19 +15,13 @@ html, body {
     background-color: white;    
     font-size: 2.25vh;
     margin: 0%;
-    /* background-image: url("./Fotos/Fondo_Isla.jpg"); */
-    /* min-height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position:0%;
-    background-size: cover;  
-    z-index: 0; */
 }
 
 .main-container{
     overflow-x: hidden;
     position: absolute;
     top: 0%;
+    left: 0%;
     width: 100vw;
     height: 100vh; 
     margin: 0%;
@@ -38,8 +32,8 @@ html, body {
     top: 0%;
     left: 0%;
     overflow-x: hidden;
-    width: auto;
     height: 100%;
+    width: auto;
     z-index: 0;
 }
 .bandera{
@@ -251,33 +245,10 @@ html, body {
 }
 
 @media only screen and (orientation: landscape)  {
-    html, body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        font-size: 2.25vh;
-        /* border: solid green 5px; */
-    }
-    .main-container{
-        overflow: hidden;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100vw;
-        height: 100vh; 
-        margin: 0%;
-        box-sizing:border-box;
-    }
+   
     .background{
-        border: none;
-        overflow: hidden;
         width:100vw;
         height:100vh;
-        position:absolute;
-        bottom: 100vh;
-        left: 0%;
-        z-index: 0;
-        background-color: white;
     }
     .bandera{
         height: 7vw;
