@@ -248,7 +248,7 @@ body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
-@media only screen and (min-aspect-ratio: 0.5) {
+@media only screen and (min-aspect-ratio: 0.7) {
   
     #bandera1{bottom:32.8vh; left: 17.5vw;}
     #bandera2{bottom:38.5vh; left: 38vw;}
