@@ -12,22 +12,23 @@
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
 }
 html, body {
-    background-color: white;    
+    background-color: rgb(85, 104, 141);    
     font-size: 2.25vh;
     height: 100%;
     margin: 0;
     padding: 0;
+    background-image: url("./Fotos/Fondo_Isla.jpg");
 }
 
 .main-container{
-    overflow-x: hidden;
     position: absolute;
     top: 0%;
     left: 0%;
     height: 100vh;
-    width: 100vw;
+    width: max-content;
     margin: 0%;
     box-sizing:border-box;
+    
 }
 .background{
     position: absolute;

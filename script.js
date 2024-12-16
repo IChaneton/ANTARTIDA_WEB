@@ -1,15 +1,4 @@
-// New event listener:
-window.addEventListener("load", function() {
-     
-    window.scroll(0, 50);
-    console.log(window.scrollY) 
-   
-
-});
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.documentElement.requestFullscreen().catch(console.log);
-});
-
+console.log(ScreenOrientation);
 const main_container = document.getElementById('main-container');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
