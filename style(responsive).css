@@ -201,6 +201,8 @@ body {
     display: block;
     text-align: start;
     color: var(--Color-Detalles);
+    font-family: var(--Source-Sans-Pro);
+    font-size: larger;
 }
 .institucional .info{
     width: 75%;
