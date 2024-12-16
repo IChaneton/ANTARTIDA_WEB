@@ -246,9 +246,15 @@ html, body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
+@media only screen and (min-aspect-ratio: 5/10) {
+    #bandera1{bottom:32vh; left: 17.5vw;}
+    #bandera2{bottom:37.5vh; left: 38vw;}
+    #bandera3{bottom:33vh; left: 60vw;}
+    #bandera4{bottom:44vh; left: 83vw;}
+        
+}
 
 @media only screen and (orientation: landscape)  {
-   
     .background{
         width:100vw;
         height:100vh;
