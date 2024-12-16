@@ -12,6 +12,11 @@ ambiente.play();
 //Función para cambiar fondo en main-container según aspecto de pantalla
 let screenAspectRatio = screen.width / screen.height;
 aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
+if(screenAspectRatio <= 0.5){
+    background.src = './Fotos/Fondo_Isla_Vertical_1.jpg';
+} else if(screenAspectRatio > 0.5 && screenAspectRatio < 1){
+    background.src = './Fotos/Fondo_Isla_Vertical_2.jpg';
+}
 screen.orientation.onchange = function(){
     screenAspectRatio = screen.width / screen.height;
     aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
