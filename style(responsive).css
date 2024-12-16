@@ -246,7 +246,7 @@ html, body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
-@media only screen and (min-aspect-ratio: 6/10) {
+@media only screen and (min-aspect-ratio: 7/10) {
     .main-container{
         border: solid green 3px;
     }
