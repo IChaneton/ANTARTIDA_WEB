@@ -236,6 +236,10 @@ body {
     transition: opacity 0.5s ease;
     
 }
+.screen-saver{
+    overflow: hidden;
+
+}
 .snowflake {
     position: absolute;
     color: white; /* Snowflake color */
@@ -249,11 +253,12 @@ body {
     #bandera1{bottom:32.8vh; left: 17.5vw;}
     #bandera2{bottom:38.5vh; left: 38vw;}
     #bandera3{bottom:34vh; left: 60vw;}
-    #bandera4{bottom:41vh; left: 87.5vw;}
+    #bandera4{bottom:43vh; left: 87.5vw;}
         
 }
 
 @media only screen and (orientation: landscape)  {
+    
     .bandera{
         height: 7vw;
     }

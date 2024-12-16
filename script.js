@@ -2,6 +2,7 @@
 const main_container = document.getElementById('main-container');
 const background = document.getElementById('background');
 const aspectRatioInfo = document.getElementById('aspectRatioInfo');
+const screenSaver = document.getElementById('screen-saver');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
@@ -140,7 +141,7 @@ function createSnowflake() {
     snowflake.style.fontSize = `${Math.random() * 1.5 + 0.5}em`;
     snowflake.style.filter = `blur(${blur}px)`;
     snowflake.style.zIndex = zIndex;
-    document.body.appendChild(snowflake);
+    screenSaver.appendChild(snowflake);
     snowflakes.push(snowflake);
     dropSnowflake(snowflake);
 }
