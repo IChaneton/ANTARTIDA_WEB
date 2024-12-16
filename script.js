@@ -11,6 +11,9 @@ ambiente.play();
 
 //Función para cambiar fondo en main-container según aspecto de pantalla
 aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
+screen.orientation.onchange = function(){
+    aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
+};
 
 // Function to handle visibility change 
 function handleVisibilityChange() { 
