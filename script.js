@@ -16,10 +16,19 @@ if(screenAspectRatio <= 0.5){
     background.src = './Fotos/Fondo_Isla_Vertical_1.jpg';
 } else if(screenAspectRatio > 0.5 && screenAspectRatio < 1){
     background.src = './Fotos/Fondo_Isla_Vertical_2.jpg';
-}
+} else {
+    background.src = './Fotos/Fondo_Isla.jpg';
+};
 screen.orientation.onchange = function(){
     screenAspectRatio = screen.width / screen.height;
     aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
+    if(screenAspectRatio <= 0.5){
+        background.src = './Fotos/Fondo_Isla_Vertical_1.jpg';
+    } else if(screenAspectRatio > 0.5 && screenAspectRatio < 1){
+        background.src = './Fotos/Fondo_Isla_Vertical_2.jpg';
+    } else {
+        background.src = './Fotos/Fondo_Isla.jpg';
+    };
 };
 
 // Function to handle visibility change 
