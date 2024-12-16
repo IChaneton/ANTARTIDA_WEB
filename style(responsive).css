@@ -245,10 +245,10 @@ body {
     opacity: 0.8; /* Opacity for snowflakes */
 }
 @media only screen and (min-aspect-ratio: 6/10) {
-    #bandera1{bottom:32vh; left: 17.5vw;}
-    #bandera2{bottom:37.5vh; left: 38vw;}
-    #bandera3{bottom:33vh; left: 60vw;}
-    #bandera4{bottom:44vh; left: 83vw;}
+    #bandera1{bottom:33vh; left: 17.5vw;}
+    #bandera2{bottom:38.5vh; left: 38vw;}
+    #bandera3{bottom:34vh; left: 60vw;}
+    #bandera4{bottom:44vh; left: 86vw;}
         
 }
 
