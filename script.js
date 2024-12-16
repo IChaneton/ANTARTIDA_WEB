@@ -1,11 +1,16 @@
-console.log(ScreenOrientation);
+const screenAspectRatio = screen.width / screen.height;
 const main_container = document.getElementById('main-container');
+const background = document.getElementById('background');
+const aspectRatioInfo = document.getElementById('aspectRatioInfo');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 ambiente.volume = 0.0;
 ambiente.loop = true;
 ambiente.play();
+
+//Función para cambiar fondo en main-container según aspecto de pantalla
+aspectRatioInfo.innerHTML = "aspect ratio: " + screenAspectRatio.toFixed(2);
 
 // Function to handle visibility change 
 function handleVisibilityChange() { 

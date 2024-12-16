@@ -11,13 +11,12 @@
     --Book-Antigua:"./Fonts/Book Antiqua";
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
 }
-html, body {
+body {
     background-color: rgb(85, 104, 141);    
     font-size: 2.25vh;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("./Fotos/Fondo_Isla.jpg");
 }
 
 .main-container{
