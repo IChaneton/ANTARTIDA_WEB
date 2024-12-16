@@ -249,7 +249,7 @@ body {
     z-index: 9999; /* Ensure snowflakes are on top */
     opacity: 0.8; /* Opacity for snowflakes */
 }
-@media only screen and (min-aspect-ratio: 0.7) {
+@media only screen and (min-aspect-ratio: 0.65) {
     #bandera1{bottom:32.8vh; left: 17.5vw;}
     #bandera2{bottom:38.5vh; left: 38vw;}
     #bandera3{bottom:34vh; left: 60vw;}
@@ -297,7 +297,7 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;       
+        justify-content: space-around;       
     }
     .x{
         position: fixed;
@@ -451,7 +451,8 @@ body {
 @media (min-width: 900px){
     .container-contents{   
         height: 50%;
-        width: 75%;     
+        width: 75%;    
+        justify-content: space-around;  
     }
     .info > p{
         z-index: 6;
