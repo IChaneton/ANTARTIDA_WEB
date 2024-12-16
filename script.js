@@ -10,7 +10,7 @@ ambiente.loop = true;
 ambiente.play();
 
 //Función para cambiar fondo en main-container según aspecto de pantalla
-aspectRatioInfo.innerHTML = "aspect ratio: " + screenAspectRatio.toFixed(2);
+aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
 
 // Function to handle visibility change 
 function handleVisibilityChange() { 
