@@ -10,10 +10,10 @@ ambiente.loop = true;
 ambiente.play();
 
 //Función para cambiar fondo en main-container según aspecto de pantalla
-const screenAspectRatio = screen.width / screen.height;
+let screenAspectRatio = screen.width / screen.height;
 aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
 screen.orientation.onchange = function(){
-    const screenAspectRatio = screen.width / screen.height;
+    screenAspectRatio = screen.width / screen.height;
     aspectRatioInfo.innerHTML = screen.orientation.type + ": " + screenAspectRatio.toFixed(2);
 };
 
