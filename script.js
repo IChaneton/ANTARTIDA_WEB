@@ -1,4 +1,3 @@
-
 const main_container = document.getElementById('main-container');
 const background = document.getElementById('background');
 const aspectRatioInfo = document.getElementById('aspectRatioInfo');

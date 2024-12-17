@@ -10,6 +10,7 @@
     --MRoca-Beige:rgb(214, 202, 185);
     --Book-Antigua:"./Fonts/Book Antiqua";
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
+    --Border-Style: hidden;
 }
 body {
     background-color: rgb(85, 104, 141);    
@@ -20,20 +21,24 @@ body {
 
 .main-container{
     overflow-x: hidden;
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
-    height: 100vh;
+    height:100vh;
     width: 100vw;
     margin: 0%;
     box-sizing:border-box;
+            border: 5px yellow;
+            border-style: var(--Border-Style);
+            
+            
 }
 .background{
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 100%;
-    width: 100%;
+    height:100vh;
+    width: 100vw;
     z-index: 0;
 }
 .bandera{
@@ -70,42 +75,48 @@ body {
 #boya2{
     mix-blend-mode: soft-light;
 }
-
-.main-container{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;    
-    
-}
 .container{
-    background-color: transparent;
     z-index: 2;
     display: none;
     animation-name: container-in;
     animation-duration: 0.2s;   
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 3vh;
+            border: green 3px solid;
+            border-style: var(--Border-Style);
 }
 @keyframes container-in{
     from{left: 100%;filter: blur(20px);}
     to{left: 40%;filter: blur(0px);}
 }
 .container-contents{
-    margin-top: 5vh;
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    transform: translate(-50%, 0%);
+    left: 50vw;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 3vh;
+         border: red solid 3px;  
+         border-style: var(--Border-Style);
 }
 .x{
-    background: transparent;
+    transform: translate(0%, -100%);
+   
     z-index: 6;
     cursor: pointer;
     position: absolute;
-    top: -5vh;
-    right: 7vw;
+    top: 0%;
+    right: 0%;
     border-radius: 10%;
     font-family:Arial, Helvetica, sans-serif ;
-    font-size: 5vh;
-    line-height: 3vh;
+    font-size: 3vh;
+   
+        border: cyan 2px solid;
+        border-style: var(--Border-Style);
 }
 .x:active{
     border: darkred solid;
@@ -120,17 +131,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+            border: yellow 3px solid;
+            border-style: var(--Border-Style);
 }
 .retrato{
-    
     z-index: 2;
     border-radius: 5%;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
-    width: 90vw;
-}
-.institucional{
-    /* border: solid red 1px; */
-    flex-direction: column;   
+    width: 100%;
 }
 
 .audio-icon{
@@ -146,10 +154,11 @@ body {
 }
 .info{
     z-index: 5;
-    width: 90%;
+    width: 100%;
     height: auto;
     z-index: 3;
-   
+            border: blue solid 2px;
+            border-style: var(--Border-Style);
 }
 .williams .info{
     height: 30%;
@@ -186,7 +195,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 5%;
-   padding: 3vh;
+    padding: 3vh;
     justify-content:space-around;
     align-items: center;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
@@ -204,17 +213,6 @@ body {
     font-family: var(--Source-Sans-Pro);
     font-size: larger;
 }
-.institucional .info{
-    width: 75%;
-    
-}
-.institucional{
-    text-align: center;
-}
-.institucional .info p{
-    
-    text-align: center;
-}
 .logos-container{
     /* border: purple solid 1px; */
     background-color: var(--Color-Fondo);
@@ -222,7 +220,6 @@ body {
     mask-border-mode:alpha ;
     text-align: center;
     border-radius: 5%;
-    width: 75%;
 }
 .logo{
     width: auto;
@@ -255,6 +252,13 @@ body {
     #bandera3{bottom:34vh; left: 60vw;}
     #bandera4{bottom:43vh; left: 87.5vw;}
 }
+@media only screen and (orientation: portrait) and (min-width: 500px) {
+    
+   .container-contents{
+    width: 70%;
+    transform: translate(-50%, 0%);
+   }
+}
 @media only screen and (orientation: landscape)  {
     .bandera{
         height: 7vw;
@@ -278,34 +282,19 @@ body {
         left: 75vw;
     }
     .container{
-        background-color: transparent;
-        z-index: 2;
-        display: none;
-        border-radius: 5%;
-        animation-name: container-in;
-        animation-duration: 0.2s;
+        margin-top: 0%;
     }
     .container-contents{
-        margin-top: 0%;
-        position: absolute;
-        transform-origin: 0% 0%;
         transform: translate(-50%, -50%);
         top: 50vh;
         left: 50vw;    
-        height: 75%;
+        height: 75vh;
         width: 90%;
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;       
+            
     }
     .x{
-        position: fixed;
-        top: -8vh;
-        right: -3vw;
-        font-size: 5vh;
-        line-height: 3vh;
-        background: transparent;
+        transform: translate(100%, -100%);
     }
     .x:active{
         border: darkred solid;
@@ -331,6 +320,13 @@ body {
         border-radius: 5%;
         box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
     }
+    .info{
+        margin-left: 5vw;
+        align-self: center;
+    }
+    .institucional .info{
+        margin-left: 0%;
+    }
     .institucional{
         /* border: solid red 1px; */
         flex-direction: column;
@@ -346,17 +342,7 @@ body {
         border-radius: 10%;
         opacity: 75%;
     }
-    .info{
-        z-index: 5;
-        width: 65%;
-        height: auto;
-        z-index: 3;
-       
-    }
-    .williams .info{
-        height: 30%;
-        width: 100%;
-    }
+   
     .info h1, h2, h3, p{
         color: var(--Color-Texto);
         z-index: 6;
@@ -406,10 +392,6 @@ body {
         text-align: start;
         color: var(--Color-Detalles);
     }
-    .institucional .info{
-        width: 75%;
-        
-    }
     .institucional{
         text-align: center;
     }
@@ -424,7 +406,7 @@ body {
         mask-border-mode:alpha ;
         text-align: center;
         border-radius: 5%;
-        width: 75%;
+       
     }
     .logo{
         width: auto;
@@ -452,7 +434,7 @@ body {
     .container-contents{   
         height: 50%;
         width: 75%;    
-        justify-content: space-around;  
+        justify-content: space-between;  
     }
     .info > p{
         z-index: 6;
