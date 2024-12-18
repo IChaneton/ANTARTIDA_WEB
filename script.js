@@ -5,9 +5,14 @@ const screenSaver = document.getElementById('screen-saver');
 const ambiente = document.getElementById('ambiente');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
-ambiente.volume = 0.0;
+ambiente.volume = 0.3;
 ambiente.loop = true;
 ambiente.play();
+
+function Scrolldown() {
+    window.scroll(0,300); 
+}
+window.onload = Scrolldown;
 
 //Función para cambiar fondo en main-container según aspecto de pantalla
 let screenAspectRatio = screen.width / screen.height;
