@@ -19,7 +19,6 @@ body{
     padding: 0;
     
 }
-
 .main-container{
     overflow: hidden;
     position: fixed;
@@ -82,7 +81,7 @@ body{
     justify-content: center;
     height: 100vh;
     width: 100%;
-    margin-top: 3vh;
+   
             border: green 3px solid;
             border-style: var(--Border-Style);
 }
@@ -98,13 +97,12 @@ body{
     left: 50vw;
     width: 100vw;
     box-sizing: border-box;
-    padding: 3vh;
+    padding: 5vh;
          border: red solid 3px;  
          border-style: var(--Border-Style);
 }
 .x{
-    transform: translate(0%, -100%);
-   
+    transform: translate(0%, 0%);
     z-index: 6;
     cursor: pointer;
     position: absolute;
@@ -113,6 +111,7 @@ body{
     border-radius: 10%;
     font-family:Arial, Helvetica, sans-serif ;
     font-size: 3vh;
+    margin: 1vh;
    
         border: cyan 2px solid;
         border-style: var(--Border-Style);
@@ -126,6 +125,8 @@ body{
     flex-direction: column;
 }
 .retrato-container{
+    height: 100%;
+    width: auto; 
     z-index: 4;
     display: flex;
     align-items: center;
@@ -138,10 +139,10 @@ body{
     border-radius: 5%;
     box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
     width: 100%;
+    height: auto;
 }
 
 .audio-icon{
-    z-index: 6;
     width: 20%;
     height: auto;
     display: block;
@@ -183,7 +184,6 @@ body{
     padding: 2vh;
     color: var(--Color-Detalles);
 }
-
 .info > p:last-child{
     text-align: right;
     font-weight: bold;
@@ -205,12 +205,20 @@ body{
     height: 4%;
 }
 .multi-play p{
-    background-color: rgba(0, 0, 0, 0.1); 
-    display: block;
-    text-align: start;
+    background-color: rgba(0, 0, 0, 0.16);
+    text-align: center;
     color: var(--Color-Detalles);
     font-family: var(--Source-Sans-Pro);
     font-size: larger;
+}
+.institucional{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.institucional .info p{
+    text-align: center;
 }
 .logos-container{
     /* border: purple solid 1px; */
@@ -258,7 +266,6 @@ body{
     
    .container-contents{
     width: 70%;
-    transform: translate(-50%, 0%);
    }
 }
 @media only screen and (orientation: landscape)  {
@@ -271,12 +278,8 @@ body{
     #bandera4{top:52.5vh; left: 81vw;}
     .irizar{
         width: 27vw;
-        height: auto;
         top: 65vh;
         left: 18vw;
-    }
-    #irizar2{
-        mix-blend-mode: soft-light;
     }
     .boya{
         width: 6vw;
@@ -289,147 +292,38 @@ body{
     .container-contents{
         transform: translate(-50%, -50%);
         top: 50vh;
-        left: 50vw;    
         height: 75vh;
         width: 90%;
         flex-direction: row;
-            
     }
     .x{
         transform: translate(100%, -100%);
     }
-    .x:active{
-        border: darkred solid;
-        background-color: transparent;
-        color: black;
-    }
-    .williams{
-        flex-direction: column;
-    }
-    .retrato-container{
-        z-index: 4;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: auto; 
-    }
     .retrato{
-        z-index: 5;
         height: 100%;
         width: auto;
-        z-index: 2;
-        border-radius: 5%;
-        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
     }
     .info{
         margin-left: 5vw;
         align-self: center;
     }
-    .institucional .info{
-        margin-left: 0%;
-    }
-    .institucional{
-        /* border: solid red 1px; */
-        flex-direction: column;
-    }
-    .audio-icon{
-        z-index: 6;
-        width: 6%;
-        height: auto;
-        display: block;
-        position: absolute;
-        z-index: 3;
-        mix-blend-mode:hard-light;
-        border-radius: 10%;
-        opacity: 75%;
-    }
-   
-    .info h1, h2, h3, p{
-        color: var(--Color-Texto);
-        z-index: 6;
-        background-color: var(--Color-Fondo);
-        border-radius: 3%;
-        padding: 1%;
-        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
-        font-family: var(--Book-Antigua);
-    }
-    
     .info > p{
-        z-index: 6;
-        text-align: justify;
-        font-family: var(--Source-Sans-Pro);
         font-size: larger;
     }
     .info > p:first-of-type{
         font-size: 1.8em;
-        padding: 2vh;
-        color: var(--Color-Detalles);
-    }
-    
-    .info > p:last-child{
-        text-align: right;
-        font-weight: bold;
-    }
-    .multi-play{
-        z-index: 6;
-        background-color: var(--Color-Fondo);
-        display: flex;
-        flex-direction: row;
-        border-radius: 5%;
-        padding-left: 3%;
-        padding-right: 3%;
-        justify-content:space-around;
-        align-items: center;
-        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
-    }
-    .multi-play .audio-icon{
-        z-index: 7;
-        position: static;
-        height: 4%;
-    }
-    .multi-play p{
-        background-color: rgba(0, 0, 0, 0.1); 
-        display: block;
-        text-align: start;
-        color: var(--Color-Detalles);
     }
     .institucional{
-        text-align: center;
+        flex-direction: column;
     }
-    .institucional .info p{
-        
-        text-align: center;
+    .institucional .info{
+        margin-left: 0%;
     }
-    .logos-container{
-        /* border: purple solid 1px; */
-        background-color: var(--Color-Fondo);
-        box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
-        mask-border-mode:alpha ;
-        text-align: center;
-        border-radius: 5%;
-       
+    .audio-icon{
+        width: 6%;
     }
-    .logo{
-        width: auto;
-        height: 8vh;
-        z-index: 8;
-        margin: 1vh 3vh;
-        filter: grayscale();
-    }
-    #subtitles {
-        margin-top: 20px;
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.5s ease;
-        
-    }
-    .snowflake {
-        position: absolute;
-        color: white; /* Snowflake color */
-        pointer-events: none; /* Prevent interaction */
-        font-size: 1em;
-        z-index: 9999; /* Ensure snowflakes are on top */
-        opacity: 0.8; /* Opacity for snowflakes */
+    .multi-play{
+        flex-direction: row;
     }
 }
 @media (min-width: 900px){
@@ -438,18 +332,8 @@ body{
         width: 75%;    
         justify-content: space-between;  
     }
-    .info > p{
-        z-index: 6;
-        text-align: justify;
-        font-family: var(--Source-Sans-Pro);
-        font-size:medium;
-    }
+   
     .info > p:first-of-type{
         font-size: 1.2em;
-        padding: 2vh;
-        color: var(--Color-Detalles);
-    }
-    .info > p:last-child{
-        font-size: larger;
     }
 }
