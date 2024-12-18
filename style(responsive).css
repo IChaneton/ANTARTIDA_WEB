@@ -12,15 +12,16 @@
     --Source-Sans-Pro:"./Fonts/source-sans-pro";
     --Border-Style: hidden;
 }
-body {
+body{
     background-color: rgb(85, 104, 141);    
     font-size: 2.25vh;
     margin: 0;
     padding: 0;
+    
 }
 
 .main-container{
-    overflow-x: hidden;
+    overflow: hidden;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -30,8 +31,6 @@ body {
     box-sizing:border-box;
             border: 5px yellow;
             border-style: var(--Border-Style);
-            
-            
 }
 .background{
     position: absolute;
